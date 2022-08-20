@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		2E78801838410C5E1E5A12C8 /* Pods_CandleSticks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B189860B99AAB5F1A028E55D /* Pods_CandleSticks.framework */; };
 		356BBC8528B102740058AAC0 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8428B102740058AAC0 /* NetworkHandler.swift */; };
-		356BBC8728B103000058AAC0 /* CandleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8628B103000058AAC0 /* CandleDataModel.swift */; };
+		356BBC8928B106130058AAC0 /* CandleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8828B106130058AAC0 /* CandleViewModel.swift */; };
+		356BBC8B28B106610058AAC0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8A28B106610058AAC0 /* Observable.swift */; };
 		359D676C28AFC9170027E764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D676B28AFC9170027E764 /* AppDelegate.swift */; };
 		359D676E28AFC9170027E764 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D676D28AFC9170027E764 /* SceneDelegate.swift */; };
-		359D677028AFC9170027E764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D676F28AFC9170027E764 /* ViewController.swift */; };
+		359D677028AFC9170027E764 /* CandleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D676F28AFC9170027E764 /* CandleViewController.swift */; };
 		359D677328AFC9170027E764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359D677128AFC9170027E764 /* Main.storyboard */; };
 		359D677528AFC9190027E764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359D677428AFC9190027E764 /* Assets.xcassets */; };
 		359D677828AFC9190027E764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359D677628AFC9190027E764 /* LaunchScreen.storyboard */; };
@@ -54,11 +55,12 @@
 
 /* Begin PBXFileReference section */
 		356BBC8428B102740058AAC0 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
-		356BBC8628B103000058AAC0 /* CandleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleDataModel.swift; sourceTree = "<group>"; };
+		356BBC8828B106130058AAC0 /* CandleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleViewModel.swift; sourceTree = "<group>"; };
+		356BBC8A28B106610058AAC0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		359D676828AFC9170027E764 /* CandleSticks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleSticks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		359D676B28AFC9170027E764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		359D676D28AFC9170027E764 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		359D676F28AFC9170027E764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		359D676F28AFC9170027E764 /* CandleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleViewController.swift; sourceTree = "<group>"; };
 		359D677228AFC9170027E764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		359D677428AFC9190027E764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		359D677728AFC9190027E764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		356BBC8C28B10AA30058AAC0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				359D676B28AFC9170027E764 /* AppDelegate.swift */,
+				359D676D28AFC9170027E764 /* SceneDelegate.swift */,
+				356BBC8A28B106610058AAC0 /* Observable.swift */,
+				359D677428AFC9190027E764 /* Assets.xcassets */,
+				359D677628AFC9190027E764 /* LaunchScreen.storyboard */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		359D675F28AFC9170027E764 = {
 			isa = PBXGroup;
 			children = (
@@ -106,16 +120,13 @@
 		359D676A28AFC9170027E764 /* CandleSticks */ = {
 			isa = PBXGroup;
 			children = (
+				356BBC8C28B10AA30058AAC0 /* Utilities */,
 				359D678D28AFEE930027E764 /* CandleSticks-bridging-header.h */,
-				359D676B28AFC9170027E764 /* AppDelegate.swift */,
-				359D676D28AFC9170027E764 /* SceneDelegate.swift */,
-				359D676F28AFC9170027E764 /* ViewController.swift */,
+				359D676F28AFC9170027E764 /* CandleViewController.swift */,
+				356BBC8828B106130058AAC0 /* CandleViewModel.swift */,
 				356BBC8428B102740058AAC0 /* NetworkHandler.swift */,
 				359D678328AFD9AD0027E764 /* CandleStickModel.swift */,
-				356BBC8628B103000058AAC0 /* CandleDataModel.swift */,
 				359D677128AFC9170027E764 /* Main.storyboard */,
-				359D677428AFC9190027E764 /* Assets.xcassets */,
-				359D677628AFC9190027E764 /* LaunchScreen.storyboard */,
 				359D679228AFF1EC0027E764 /* Charts.xcodeproj */,
 				359D677928AFC9190027E764 /* Info.plist */,
 			);
@@ -270,11 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				359D677028AFC9170027E764 /* ViewController.swift in Sources */,
+				356BBC8B28B106610058AAC0 /* Observable.swift in Sources */,
+				359D677028AFC9170027E764 /* CandleViewController.swift in Sources */,
 				359D676C28AFC9170027E764 /* AppDelegate.swift in Sources */,
-				356BBC8728B103000058AAC0 /* CandleDataModel.swift in Sources */,
 				359D676E28AFC9170027E764 /* SceneDelegate.swift in Sources */,
 				356BBC8528B102740058AAC0 /* NetworkHandler.swift in Sources */,
+				356BBC8928B106130058AAC0 /* CandleViewModel.swift in Sources */,
 				359D678428AFD9AD0027E764 /* CandleStickModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
