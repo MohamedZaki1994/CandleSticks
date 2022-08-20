@@ -11,6 +11,7 @@ import Charts
 class CandleViewModel {
     let request = NetworkHandler()
     var yValue: Observable<[CandleChartDataEntry]> = Observable([])
+    var hasError: Observable<Bool>? = Observable(false)
 
     func fetchData() {
         request.request { result in
@@ -38,8 +39,9 @@ class CandleViewModel {
                     values.append(value)
                 }
                 self.yValue.value = values
-            case .failure(let error):
-                print(error)
+                self.hasError?.value = false
+            case .failure:
+                self.hasError?.value = true
             }
         }
     }

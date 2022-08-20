@@ -39,12 +39,17 @@ class CandleViewController: UIViewController {
             guard let values = values else {
                 return
             }
-            DispatchQueue.main.async {
-            let set = CandleChartDataSet(entries: values, label: "price")
-            let data = CandleChartData(dataSet: set)
-                self.candleChartView.data = data
+            DispatchQueue.main.async { [weak self] in
+                let set = CandleChartDataSet(entries: values, label: "price")
+                let data = CandleChartData(dataSet: set)
+                self?.candleChartView.data = data
             }
         }
+        viewModel.hasError?.bind({ [weak self] hasError in
+            if hasError ?? false {
+                self?.showError()
+            }
+        })
     }
 
     func embedView() {
@@ -54,6 +59,15 @@ class CandleViewController: UIViewController {
         candleChartView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         candleChartView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         candleChartView.heightAnchor.constraint(equalToConstant: 400).isActive = true
+    }
+
+    func showError() {
+        let alert = UIAlertController(title: "Error", message: "couldn't load your content", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "try again", style: .default, handler: { [weak self] alertAction in
+            self?.viewModel.hasError?.value = false
+            self?.viewModel.fetchData()
+        }))
+        present(alert, animated: true, completion: nil)
     }
 }
 

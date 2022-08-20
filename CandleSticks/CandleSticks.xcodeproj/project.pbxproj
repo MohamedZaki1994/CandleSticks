@@ -122,9 +122,9 @@
 			children = (
 				356BBC8C28B10AA30058AAC0 /* Utilities */,
 				359D678D28AFEE930027E764 /* CandleSticks-bridging-header.h */,
+				356BBC8428B102740058AAC0 /* NetworkHandler.swift */,
 				359D676F28AFC9170027E764 /* CandleViewController.swift */,
 				356BBC8828B106130058AAC0 /* CandleViewModel.swift */,
-				356BBC8428B102740058AAC0 /* NetworkHandler.swift */,
 				359D678328AFD9AD0027E764 /* CandleStickModel.swift */,
 				359D677128AFC9170027E764 /* Main.storyboard */,
 				359D679228AFF1EC0027E764 /* Charts.xcodeproj */,
