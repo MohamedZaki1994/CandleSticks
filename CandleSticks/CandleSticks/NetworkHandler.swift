@@ -9,10 +9,17 @@ import Foundation
 
 class NetworkHandler {
 
-    let url = "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=15m&lim"
+    let baseURL = "https://fapi.binance.com"
+    let path = "/fapi/v1/klines"
 
-    func request(completion: ((Result<CandleStickModel, Error>) -> Void)?) {
-        URLSession.shared.dataTask(with: URL(string: url)!) { data, response, error in
+    func request(symbolParameter: String, completion: ((Result<CandleStickModel, Error>) -> Void)?) {
+        var urlComponent = URLComponents(string: baseURL)!
+        urlComponent.path = path
+        urlComponent.queryItems = [
+            URLQueryItem(name: "symbol", value: symbolParameter),
+            URLQueryItem(name: "interval", value: "15m")
+        ]
+        URLSession.shared.dataTask(with: urlComponent.url!) { data, response, error in
             guard let data = data else {
                 guard let error = error else {
                     return

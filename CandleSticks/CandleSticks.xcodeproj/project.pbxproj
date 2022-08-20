@@ -11,6 +11,9 @@
 		356BBC8528B102740058AAC0 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8428B102740058AAC0 /* NetworkHandler.swift */; };
 		356BBC8928B106130058AAC0 /* CandleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8828B106130058AAC0 /* CandleViewModel.swift */; };
 		356BBC8B28B106610058AAC0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8A28B106610058AAC0 /* Observable.swift */; };
+		356BBC9028B10F380058AAC0 /* SymbolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8F28B10F380058AAC0 /* SymbolsViewController.swift */; };
+		356BBC9728B113B00058AAC0 /* SymbolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC9528B113B00058AAC0 /* SymbolTableViewCell.swift */; };
+		356BBC9828B113B00058AAC0 /* SymbolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356BBC9628B113B00058AAC0 /* SymbolTableViewCell.xib */; };
 		359D676C28AFC9170027E764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D676B28AFC9170027E764 /* AppDelegate.swift */; };
 		359D676E28AFC9170027E764 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D676D28AFC9170027E764 /* SceneDelegate.swift */; };
 		359D677028AFC9170027E764 /* CandleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D676F28AFC9170027E764 /* CandleViewController.swift */; };
@@ -57,6 +60,9 @@
 		356BBC8428B102740058AAC0 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		356BBC8828B106130058AAC0 /* CandleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleViewModel.swift; sourceTree = "<group>"; };
 		356BBC8A28B106610058AAC0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		356BBC8F28B10F380058AAC0 /* SymbolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsViewController.swift; sourceTree = "<group>"; };
+		356BBC9528B113B00058AAC0 /* SymbolTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SymbolTableViewCell.swift; path = CandleSticks/SymbolTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		356BBC9628B113B00058AAC0 /* SymbolTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SymbolTableViewCell.xib; path = CandleSticks/SymbolTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		359D676828AFC9170027E764 /* CandleSticks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleSticks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		359D676B28AFC9170027E764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		359D676D28AFC9170027E764 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,26 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		356BBC8D28B10EFB0058AAC0 /* CandleSticks */ = {
+			isa = PBXGroup;
+			children = (
+				359D678328AFD9AD0027E764 /* CandleStickModel.swift */,
+				356BBC8828B106130058AAC0 /* CandleViewModel.swift */,
+				359D676F28AFC9170027E764 /* CandleViewController.swift */,
+			);
+			path = CandleSticks;
+			sourceTree = "<group>";
+		};
+		356BBC8E28B10F160058AAC0 /* Symbols */ = {
+			isa = PBXGroup;
+			children = (
+				356BBC8F28B10F380058AAC0 /* SymbolsViewController.swift */,
+				356BBC9528B113B00058AAC0 /* SymbolTableViewCell.swift */,
+				356BBC9628B113B00058AAC0 /* SymbolTableViewCell.xib */,
+			);
+			path = Symbols;
+			sourceTree = "<group>";
+		};
 		359D675F28AFC9170027E764 = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +149,8 @@
 				356BBC8C28B10AA30058AAC0 /* Utilities */,
 				359D678D28AFEE930027E764 /* CandleSticks-bridging-header.h */,
 				356BBC8428B102740058AAC0 /* NetworkHandler.swift */,
-				359D676F28AFC9170027E764 /* CandleViewController.swift */,
-				356BBC8828B106130058AAC0 /* CandleViewModel.swift */,
-				359D678328AFD9AD0027E764 /* CandleStickModel.swift */,
+				356BBC8E28B10F160058AAC0 /* Symbols */,
+				356BBC8D28B10EFB0058AAC0 /* CandleSticks */,
 				359D677128AFC9170027E764 /* Main.storyboard */,
 				359D679228AFF1EC0027E764 /* Charts.xcodeproj */,
 				359D677928AFC9190027E764 /* Info.plist */,
@@ -244,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				359D677828AFC9190027E764 /* LaunchScreen.storyboard in Resources */,
+				356BBC9828B113B00058AAC0 /* SymbolTableViewCell.xib in Resources */,
 				359D677528AFC9190027E764 /* Assets.xcassets in Resources */,
 				359D677328AFC9170027E764 /* Main.storyboard in Resources */,
 			);
@@ -281,12 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356BBC9728B113B00058AAC0 /* SymbolTableViewCell.swift in Sources */,
 				356BBC8B28B106610058AAC0 /* Observable.swift in Sources */,
 				359D677028AFC9170027E764 /* CandleViewController.swift in Sources */,
 				359D676C28AFC9170027E764 /* AppDelegate.swift in Sources */,
 				359D676E28AFC9170027E764 /* SceneDelegate.swift in Sources */,
 				356BBC8528B102740058AAC0 /* NetworkHandler.swift in Sources */,
 				356BBC8928B106130058AAC0 /* CandleViewModel.swift in Sources */,
+				356BBC9028B10F380058AAC0 /* SymbolsViewController.swift in Sources */,
 				359D678428AFD9AD0027E764 /* CandleStickModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

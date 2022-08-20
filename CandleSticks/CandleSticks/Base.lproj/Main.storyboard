@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c2Q-wk-IDF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,10 +8,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Symbols View Controller-->
+        <scene sceneID="TWi-h3-mmc">
+            <objects>
+                <viewController id="eVf-5m-j62" customClass="SymbolsViewController" customModule="CandleSticks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DNC-RD-6nn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbols" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xo-c8-iAZ">
+                                <rect key="frame" x="10" y="88" width="384" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zg6-2J-bka">
+                                <rect key="frame" x="20" y="138" width="374" height="704"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="CNZ-vd-o2a"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Fad-mB-D9f"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vao-8a-oEo"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zg6-2J-bka" firstAttribute="top" secondItem="5Xo-c8-iAZ" secondAttribute="bottom" constant="20" id="73j-PO-NsJ"/>
+                            <constraint firstItem="5Xo-c8-iAZ" firstAttribute="top" secondItem="vao-8a-oEo" secondAttribute="top" id="OEh-3T-5gj"/>
+                            <constraint firstItem="Zg6-2J-bka" firstAttribute="top" secondItem="vao-8a-oEo" secondAttribute="top" constant="50" id="RQp-mJ-EwR"/>
+                            <constraint firstItem="Zg6-2J-bka" firstAttribute="leading" secondItem="vao-8a-oEo" secondAttribute="leading" constant="20" id="VoF-Fr-iN4"/>
+                            <constraint firstItem="vao-8a-oEo" firstAttribute="trailing" secondItem="Zg6-2J-bka" secondAttribute="trailing" constant="20" id="ew6-r2-pOp"/>
+                            <constraint firstItem="vao-8a-oEo" firstAttribute="trailing" secondItem="5Xo-c8-iAZ" secondAttribute="trailing" constant="20" id="i1G-YF-bgR"/>
+                            <constraint firstItem="vao-8a-oEo" firstAttribute="bottom" secondItem="Zg6-2J-bka" secondAttribute="bottom" constant="20" id="lGP-lz-UTg"/>
+                            <constraint firstItem="5Xo-c8-iAZ" firstAttribute="leading" secondItem="vao-8a-oEo" secondAttribute="leading" constant="10" id="uNP-EE-WPh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Rm-uX-Ag3"/>
+                    <connections>
+                        <outlet property="symbolTableView" destination="Zg6-2J-bka" id="lMD-UR-WaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uj1-nR-VGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62.318840579710148" y="75.669642857142847"/>
+        </scene>
         <!--Candle View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CandleViewController" customModule="CandleSticks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CandleViewController" id="BYZ-38-t0r" customClass="CandleViewController" customModule="CandleSticks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +65,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="80"/>
+            <point key="canvasLocation" x="1036.231884057971" y="79.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kse-24-H3y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c2Q-wk-IDF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CfR-RV-XqW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eVf-5m-j62" kind="relationship" relationship="rootViewController" id="Pgi-ms-MPm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fES-9f-kkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-969.56521739130437" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>

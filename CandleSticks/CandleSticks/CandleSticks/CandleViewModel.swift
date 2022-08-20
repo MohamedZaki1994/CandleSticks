@@ -12,9 +12,14 @@ class CandleViewModel {
     let request = NetworkHandler()
     var yValue: Observable<[CandleChartDataEntry]> = Observable([])
     var hasError: Observable<Bool>? = Observable(false)
+    var symbolParameter: String
+
+    init(symbolParameter: String) {
+        self.symbolParameter = symbolParameter
+    }
 
     func fetchData() {
-        request.request { result in
+        request.request(symbolParameter: symbolParameter) { result in
             switch result {
             case .success(let model):
                 var values: [CandleChartDataEntry] = [CandleChartDataEntry]()
