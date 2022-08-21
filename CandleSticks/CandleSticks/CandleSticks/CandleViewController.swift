@@ -89,10 +89,3 @@ class CandleViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
-
-
-extension CandleViewController: ChartViewDelegate {
-    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-        print(entry)
-    }
-}
