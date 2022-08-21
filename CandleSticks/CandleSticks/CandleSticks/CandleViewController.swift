@@ -10,6 +10,7 @@ import Charts
 
 class CandleViewController: UIViewController {
     var viewModel: CandleViewModel?
+    var spinner = UIActivityIndicatorView(style: .whiteLarge)
     lazy var candleChartView: CandleStickChartView = {
         let chartView = CandleStickChartView()
         chartView.backgroundColor = .darkGray
@@ -35,9 +36,14 @@ class CandleViewController: UIViewController {
         super.viewDidLoad()
         embedView()
         viewModel?.fetchData()
-        viewModel?.yValue.bind { values in
+        viewModel?.yValue.bind { [weak self] values in
             guard let values = values else {
                 return
+            }
+            if values.isEmpty {
+                self?.showLoading(flag: true)
+            } else {
+                self?.showLoading(flag: false)
             }
             DispatchQueue.main.async { [weak self] in
                 let set = CandleChartDataSet(entries: values, label: "price")
@@ -50,6 +56,19 @@ class CandleViewController: UIViewController {
                 self?.showError()
             }
         })
+    }
+
+    func showLoading(flag: Bool) {
+        if flag {
+            spinner.translatesAutoresizingMaskIntoConstraints = false
+            spinner.startAnimating()
+            view.addSubview(spinner)
+            spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        } else {
+            spinner.stopAnimating()
+            spinner.removeFromSuperview()
+        }
     }
 
     func embedView() {
