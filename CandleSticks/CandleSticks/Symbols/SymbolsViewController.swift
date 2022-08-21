@@ -9,8 +9,7 @@ import UIKit
 
 class SymbolsViewController: UIViewController {
 
-    let symbols = ["BTC", "ETH", "LTC"]
-    let symbolsFullName = ["BTCUSDT", "ETHUSDT", "LTCUSDT"]
+    let symbols = [("BTC","BTCUSDT"), ("ETH","ETHUSDT"), ("LTC","LTCUSDT")]
     let cellId = "SymbolTableViewCell"
     @IBOutlet weak var symbolTableView: UITableView!
 
@@ -37,14 +36,15 @@ extension SymbolsViewController: UITableViewDataSource, UITableViewDelegate {
         guard let symbolCell = cell as? SymbolTableViewCell else {
             return cell
         }
-        symbolCell.symbolTitle.text = symbols[indexPath.row]
+        symbolCell.symbolTitle.text = symbols[indexPath.row].0
+        symbolCell.selectionStyle = .none
         return symbolCell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         guard let candleStickVC = storyboard.instantiateViewController(withIdentifier: "CandleViewController") as? CandleViewController else {return}
-        let candleViewModel = CandleViewModel(symbolParameter: symbolsFullName[indexPath.row])
+        let candleViewModel = CandleViewModel(symbolParameter: symbols[indexPath.row].1)
         candleStickVC.viewModel = candleViewModel
         navigationController?.pushViewController(candleStickVC, animated: true)
     }

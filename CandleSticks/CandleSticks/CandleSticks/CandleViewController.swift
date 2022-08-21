@@ -12,9 +12,9 @@ class CandleViewController: UIViewController {
     var viewModel: CandleViewModel?
     lazy var candleChartView: CandleStickChartView = {
         let chartView = CandleStickChartView()
-        chartView.backgroundColor = .systemBlue
-        chartView.rightAxis.enabled = false
-        let yAxis = chartView.leftAxis
+        chartView.backgroundColor = .darkGray
+        chartView.leftAxis.enabled = false
+        let yAxis = chartView.rightAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 12)
         yAxis.setLabelCount(6, force: false)
         yAxis.labelTextColor = .white
