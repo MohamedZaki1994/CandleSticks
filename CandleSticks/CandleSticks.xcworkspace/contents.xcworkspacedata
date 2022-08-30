@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CandleSticks.xcodeproj">
+      location = "container:../Charts-master">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
