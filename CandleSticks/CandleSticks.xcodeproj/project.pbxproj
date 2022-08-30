@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E78801838410C5E1E5A12C8 /* Pods_CandleSticks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B189860B99AAB5F1A028E55D /* Pods_CandleSticks.framework */; };
+		35477B9028BE2EAB00794079 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35477B8D28BE2E9100794079 /* Charts.framework */; };
 		356BBC8528B102740058AAC0 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8428B102740058AAC0 /* NetworkHandler.swift */; };
 		356BBC8928B106130058AAC0 /* CandleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8828B106130058AAC0 /* CandleViewModel.swift */; };
 		356BBC8B28B106610058AAC0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BBC8A28B106610058AAC0 /* Observable.swift */; };
@@ -21,21 +22,19 @@
 		359D677528AFC9190027E764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 359D677428AFC9190027E764 /* Assets.xcassets */; };
 		359D677828AFC9190027E764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359D677628AFC9190027E764 /* LaunchScreen.storyboard */; };
 		359D678428AFD9AD0027E764 /* CandleStickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D678328AFD9AD0027E764 /* CandleStickModel.swift */; };
-		359D679B28AFF2130027E764 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 359D679828AFF1EC0027E764 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		35EFDE4D28AFF2D900615B9E /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359D679828AFF1EC0027E764 /* Charts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		359D679728AFF1EC0027E764 /* PBXContainerItemProxy */ = {
+		35477B8C28BE2E9100794079 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 359D679228AFF1EC0027E764 /* Charts.xcodeproj */;
+			containerPortal = 35477B8728BE2E9100794079 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		359D679928AFF1EC0027E764 /* PBXContainerItemProxy */ = {
+		35477B8E28BE2E9100794079 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 359D679228AFF1EC0027E764 /* Charts.xcodeproj */;
+			containerPortal = 35477B8728BE2E9100794079 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
@@ -49,7 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				359D679B28AFF2130027E764 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		35477B8728BE2E9100794079 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		356BBC8428B102740058AAC0 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		356BBC8828B106130058AAC0 /* CandleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleViewModel.swift; sourceTree = "<group>"; };
 		356BBC8A28B106610058AAC0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -74,7 +73,6 @@
 		359D678328AFD9AD0027E764 /* CandleStickModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickModel.swift; sourceTree = "<group>"; };
 		359D678928AFEE3D0027E764 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		359D678D28AFEE930027E764 /* CandleSticks-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CandleSticks-bridging-header.h"; sourceTree = "<group>"; };
-		359D679228AFF1EC0027E764 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		B189860B99AAB5F1A028E55D /* Pods_CandleSticks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CandleSticks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DB93C274C8D25047E6BF3F /* Pods-CandleSticks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CandleSticks.debug.xcconfig"; path = "Target Support Files/Pods-CandleSticks/Pods-CandleSticks.debug.xcconfig"; sourceTree = "<group>"; };
 		FBB9251F32D2ACF997749210 /* Pods-CandleSticks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CandleSticks.release.xcconfig"; path = "Target Support Files/Pods-CandleSticks/Pods-CandleSticks.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35EFDE4D28AFF2D900615B9E /* Charts.framework in Frameworks */,
+				35477B9028BE2EAB00794079 /* Charts.framework in Frameworks */,
 				2E78801838410C5E1E5A12C8 /* Pods_CandleSticks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35477B8828BE2E9100794079 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35477B8D28BE2E9100794079 /* Charts.framework */,
+				35477B8F28BE2E9100794079 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		356BBC8C28B10AA30058AAC0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,19 +159,10 @@
 				356BBC8E28B10F160058AAC0 /* Symbols */,
 				356BBC8D28B10EFB0058AAC0 /* CandleSticks */,
 				359D677128AFC9170027E764 /* Main.storyboard */,
-				359D679228AFF1EC0027E764 /* Charts.xcodeproj */,
+				35477B8728BE2E9100794079 /* Charts.xcodeproj */,
 				359D677928AFC9190027E764 /* Info.plist */,
 			);
 			path = CandleSticks;
-			sourceTree = "<group>";
-		};
-		359D679328AFF1EC0027E764 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				359D679828AFF1EC0027E764 /* Charts.framework */,
-				359D679A28AFF1EC0027E764 /* ChartsTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A357D2429E89DC3091E466E6 /* Pods */ = {
@@ -235,8 +233,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 359D679328AFF1EC0027E764 /* Products */;
-					ProjectRef = 359D679228AFF1EC0027E764 /* Charts.xcodeproj */;
+					ProductGroup = 35477B8828BE2E9100794079 /* Products */;
+					ProjectRef = 35477B8728BE2E9100794079 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -247,18 +245,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		359D679828AFF1EC0027E764 /* Charts.framework */ = {
+		35477B8D28BE2E9100794079 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 359D679728AFF1EC0027E764 /* PBXContainerItemProxy */;
+			remoteRef = 35477B8C28BE2E9100794079 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		359D679A28AFF1EC0027E764 /* ChartsTests.xctest */ = {
+		35477B8F28BE2E9100794079 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 359D679928AFF1EC0027E764 /* PBXContainerItemProxy */;
+			remoteRef = 35477B8E28BE2E9100794079 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
